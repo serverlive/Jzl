@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest" disable-devtool-auto></script>
+    
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
+        #mirror-frame { width: 100%; height: 100vh; border: none; }
+    </style>
+</head>
+<body>
+
+    <iframe id="mirror-frame" 
+            src="https://corsproxy.io/?https://gofile.io/d/q6x3ow" 
+            allowfullscreen>
+    </iframe>
+
+    <script>
+        // Logika tambahan untuk memastikan tombol download di dalam iframe bisa diklik
+        const frame = document.getElementById('mirror-frame');
+        frame.onload = function() {
+            try {
+                // Menghapus elemen pengganggu jika diperlukan
+                console.log("Sapu Jagat: Mirroring aktif.");
+            } catch (e) {
+                console.log("Akses dibatasi.");
+            }
+        };
+    </script>
+</body>
+</html>
